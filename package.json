@@ -6,7 +6,8 @@
     "dev": "keystone dev",
     "start": "keystone start",
     "build": "keystone build",
-    "postinstall": "keystone postinstall"
+    "postinstall": "keystone postinstall",
+    "test": "snyk test"
   },
   "dependencies": {
     "@keystone-6/auth": "^1.0.1",
@@ -17,5 +18,8 @@
   },
   "engines": {
     "node": "^14.15 || ^16.13"
+  },
+  "devDependencies": {
+    "snyk": "^1.831.0"
   }
 }
