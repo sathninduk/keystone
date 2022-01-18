@@ -8,6 +8,7 @@ For more on auth, check out: https://keystonejs.com/docs/apis/auth#authenticatio
 */
 
 import { createAuth } from '@keystone-6/auth';
+require('dotenv').config()
 
 // See https://keystonejs.com/docs/apis/session#session-api for the session docs
 import { statelessSessions } from '@keystone-6/core/session';
@@ -22,7 +23,8 @@ if (!sessionSecret) {
       'The SESSION_SECRET environment variable must be set in production'
     );
   } else {
-    sessionSecret = '-- DEV COOKIE SECRET; CHANGE ME --';
+    //sessionSecret = '-- DEV COOKIE SECRET; CHANGE ME --';
+    sessionSecret = process.env.SESSION_SECRET;
   }
 }
 
